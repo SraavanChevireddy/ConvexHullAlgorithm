@@ -27,18 +27,18 @@ public class Assignment extends JPanel {
         try{
             Scanner textScanner = new Scanner(ofFile);
             textScanner.useDelimiter("\n");
-            double[][] points  = new double[4][2];
+            double[][] points  = new double[5][2];
           
             System.out.println("Printing all the input lines");
-            
+
+            int i = 0;
             while(textScanner.hasNextLine()){
-                int i = 0;
                 String str_points = textScanner.nextLine();
                 String[] splited = str_points.split("\\s+");
                 for(int j = 0; j<2;j++){
                     points[i][j] = Double.parseDouble(splited[j]);
                 }
-                i++;
+                i = i + 1;
             }
             int K = 2;
             System.out.println(points);
